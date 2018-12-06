@@ -11,7 +11,7 @@ from .forms import PostForm
 # Create your views here.
 class PostListView(ListView):
     model = Post
-    paginate_by = 15
+    paginate_by = 5
 
 class PostDetailView(DetailView):
     model = Post

@@ -15,12 +15,17 @@
     {% endfor %}
   </ul>
   {% endif %}
+  <div>
+    <h1>Posts</h1>
+    <p>총 {{ object_list|length }}개의 포스트가 있습니다.</p>
+    <h4>Recent Posts</h4>
+  </div>
   <div class="list">
-    <ol>
+    <ul>
       {% for obj in object_list %}
       <li><a href="{% url 'post_detail' pk=obj.id %}">{{ obj.title }}</a></li>
       {% endfor %}
-    </ol>
+    </ul>
   </div>
   <div class="paginator">
     {% if page_obj.has_previous %}
